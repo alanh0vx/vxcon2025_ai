@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    container_name: simple_chat_app
+    environment:
+      - OLLAMA_ENDPOINT=http://host.docker.internal:11434
+      - MODEL_NAME=gemma3:270m
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+    working_dir: /app
+    profiles:
+      - interactive

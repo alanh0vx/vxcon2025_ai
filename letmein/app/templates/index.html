@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let Me In - LLM Social Engineering Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">🔐 LET ME IN 🔐</div>
+            <div class="subtitle">LLM Social Engineering Challenge</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div>Current Level</div>
+                <div class="stat-value" id="current-level">1</div>
+            </div>
+            <div class="stat-item">
+                <div>Levels Completed</div>
+                <div class="stat-value" id="levels-completed">0</div>
+            </div>
+            <div class="stat-item">
+                <div>Connection Status</div>
+                <div class="stat-value" id="connection-status">Checking...</div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="panel">
+                <h3>🎯 Game Control</h3>
+                
+                <div class="level-selector">
+                    <button class="level-btn active" onclick="selectLevel(1, event)">Level 1</button>
+                    <button class="level-btn" onclick="selectLevel(2, event)">Level 2</button>
+                    <button class="level-btn" onclick="selectLevel(3, event)">Level 3</button>
+                    <button class="level-btn" onclick="selectLevel(4, event)">Level 4</button>
+                    <button class="new-game-btn" onclick="newGame()">New Game</button>
+                </div>
+                
+                <div class="input-area">
+                    <textarea 
+                        class="message-input" 
+                        id="message-input" 
+                        placeholder="Enter your message to trick the AI..."
+                    ></textarea>
+                    <br>
+                    <button class="send-btn" id="send-btn" onclick="sendMessage()">
+                        Send Message
+                    </button>
+                </div>
+                
+                <div class="password-section">
+                    <h4>🔑 Submit Password</h4>
+                    <input 
+                        type="text" 
+                        class="password-input" 
+                        id="password-input" 
+                        placeholder="Enter password you discovered..."
+                    >
+                    <button class="submit-btn" id="submit-btn" onclick="submitPassword()">
+                        Submit Password
+                    </button>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <h3>💬 Conversation</h3>
+                <div class="chat-area" id="chat-area">
+                    <div class="message">
+                        <strong>Welcome to Let Me In!</strong><br>
+                        Your goal is to trick the AI into revealing the password for each level.
+                        Each level has different security measures. Good luck!
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h3>📋 Instructions</h3>
+            <ul class="instructions">
+                <li><strong>Step 1:</strong> Chat with the AI to try to get it to reveal the password</li>
+                <li><strong>Step 2:</strong> When you think you have the password, enter it in the password field</li>
+                <li><strong>Step 3:</strong> Submit the password to advance to the next level</li>
+                <li><strong>Tip:</strong> Each level requires different social engineering techniques</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>

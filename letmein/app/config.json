@@ -1,0 +1,18 @@
+{
+    "ollama_endpoint": "http://host.docker.internal:11434",
+    "model_name": "gemma3:270m",
+    "game_settings": {
+        "max_attempts_per_level": 10,
+        "session_timeout": 1800,
+        "enable_hints": true
+    },
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8000,
+        "debug": false
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    }
+}

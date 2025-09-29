@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+    color: #00ff00;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #88ff88;
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.panel {
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.panel h3 {
+    color: #00ffff;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.level-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.level-btn {
+    padding: 10px 20px;
+    background: #001100;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.level-btn:hover {
+    background: #003300;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.level-btn.active {
+    background: #00ff00;
+    color: #000;
+    font-weight: bold;
+}
+
+.new-game-btn {
+    padding: 10px 20px;
+    background: #330000;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+
+.new-game-btn:hover {
+    background: #ff0000;
+    color: #000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+.message-input {
+    width: 100%;
+    height: 100px;
+    background: #000;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    font-family: inherit;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.send-btn {
+    background: #003300;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.send-btn:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.password-section {
+    border-top: 1px solid #00ff00;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.password-section h4 {
+    color: #ffff00;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.password-input {
+    width: 100%;
+    background: #000;
+    border: 1px solid #ffff00;
+    color: #ffff00;
+    padding: 10px;
+    font-family: inherit;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.password-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ffff00;
+}
+
+.submit-btn {
+    background: #333300;
+    border: 1px solid #ffff00;
+    color: #ffff00;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #ffff00;
+    color: #000;
+    box-shadow: 0 0 10px #ffff00;
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.chat-area {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #00ff00;
+    padding: 15px;
+    background: #000;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background: rgba(0, 100, 255, 0.2);
+    border-left: 3px solid #0066ff;
+}
+
+.ai-message {
+    background: rgba(255, 100, 0, 0.2);
+    border-left: 3px solid #ff6600;
+}
+
+.success-message {
+    background: rgba(0, 255, 0, 0.2);
+    border-left: 3px solid #00ff00;
+    font-weight: bold;
+}
+
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    border-left: 3px solid #ff0000;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid #00ffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.stat-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.loading {
+    text-align: center;
+    color: #ffff00;
+}
+
+.instructions {
+    color: #88ff88;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .game-area {
+        grid-template-columns: 1fr;
+    }
+    
+    .level-selector {
+        justify-content: center;
+    }
+    
+    .title {
+        font-size: 2em;
+    }
+}
