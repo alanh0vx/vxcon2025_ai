@@ -4,7 +4,24 @@ This repository contains educational projects for teaching Large Language Model 
 
 ## 🎯 Projects
 
-### 1. **LetMeIn Game** - Social Engineering AI Challenge
+### 1. **Simple Chat** - Console LLM Chatbot
+A terminal-based chatbot featuring "Chef Marco," demonstrating basic LLM interaction patterns.
+
+**Key Learning Topics:**
+- LLM API integration with Ollama
+- System prompt design
+- Console application development
+- Docker containerization
+
+**Quick Start:**
+```bash
+cd simple_chat
+docker compose run --rm chatbot
+```
+
+📖 **[Detailed Documentation](simple_chat/README.md)**
+
+### 2. **LetMeIn Game** - Social Engineering AI Challenge
 A web-based game where players attempt to trick an AI into revealing passwords across 4 difficulty levels.
 
 **Key Learning Topics:**
@@ -21,23 +38,6 @@ docker compose up --build
 ```
 
 📖 **[Detailed Documentation](letmein/README.md)**
-
-### 2. **Simple Chat** - Console LLM Chatbot
-A terminal-based chatbot featuring "Chef Marco," demonstrating basic LLM interaction patterns.
-
-**Key Learning Topics:**
-- LLM API integration with Ollama
-- System prompt design
-- Console application development
-- Docker containerization
-
-**Quick Start:**
-```bash
-cd simple_chat
-docker compose run --rm chatbot
-```
-
-📖 **[Detailed Documentation](simple_chat/README.md)**
 
 ## 📚 Learning Resources
 
@@ -83,17 +83,17 @@ This repository is designed to teach students:
 
 ```
 vxcon2025_ai/
+├── simple_chat/             # Console chatbot
+│   ├── chat.py              # Main chatbot application
+│   ├── system_prompts.py    # AI personality definitions
+│   ├── docker-compose.yml
+│   └── README.md
 ├── letmein/                 # Web-based AI security game
 │   ├── app/
 │   │   ├── services/        # Game logic and LLM integration
 │   │   ├── static/          # Frontend assets (CSS, JS)
 │   │   ├── templates/       # HTML templates
 │   │   └── main.py          # FastAPI server
-│   ├── docker-compose.yml
-│   └── README.md
-├── simple_chat/             # Console chatbot
-│   ├── chat.py              # Main chatbot application
-│   ├── system_prompts.py    # AI personality definitions
 │   ├── docker-compose.yml
 │   └── README.md
 ├── learning.md              # Comprehensive learning guide
@@ -122,8 +122,8 @@ vxcon2025_ai/
 
 | Component | Description | Documentation |
 |-----------|-------------|---------------|
-| **LetMeIn Game** | Web-based AI security challenge | [README](letmein/README.md) |
 | **Simple Chat** | Console LLM chatbot | [README](simple_chat/README.md) |
+| **LetMeIn Game** | Web-based AI security challenge | [README](letmein/README.md) |
 | **Learning Guide** | Technical concepts and tutorials | [learning.md](learning.md) |
 
 ## 🚀 Getting Started
@@ -141,8 +141,8 @@ vxcon2025_ai/
    ```
 
 3. **Choose a project to explore:**
+   - For beginners: `cd simple_chat`
    - For web development: `cd letmein`
-   - For console applications: `cd simple_chat`
 
 4. **Follow the project-specific README for detailed setup**
 
