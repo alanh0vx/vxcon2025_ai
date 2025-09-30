@@ -31,7 +31,7 @@ class OllamaAPI:
         """
         url = f"{self.base_url}/{endpoint}"
         try:
-            response = requests.post(url, json=data, timeout=60)
+            response = requests.post(url, json=data, timeout=300)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:

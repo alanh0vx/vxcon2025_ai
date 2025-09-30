@@ -42,7 +42,7 @@ class ChefChatbot:
                         "max_tokens": 500
                     }
                 },
-                timeout=30
+                timeout=300
             )
             
             if response.status_code == 200:
