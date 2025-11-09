@@ -19,6 +19,8 @@ cd simple_chat
 docker compose run --rm chatbot
 ```
 
+you can modify the model from `gemma:270m` to other models like `gemma:4b` from `docker-compose.yml`
+
 📖 **[Detailed Documentation](simple_chat/README.md)**
 
 ### 2. **LetMeIn Game** - Social Engineering AI Challenge
@@ -36,6 +38,8 @@ cd letmein
 docker compose up --build
 # Visit: http://localhost:8000
 ```
+
+you can modify the model from `gemma:270m` to other models like `gemma:4b` from `config.json`
 
 📖 **[Detailed Documentation](letmein/README.md)**
 
